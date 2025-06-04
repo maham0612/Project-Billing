@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# 📋 Timesheet & Billing System (MERN Stack)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a MERN (MongoDB, Express.js, React, Node.js) based project developed to manage timesheets and billing efficiently for client-related tasks.
+![Add Timesheet Screenshot](./Assests/Main_pic.png)
+---
 
-## Available Scripts
+## 🛠 Features
 
-In the project directory, you can run:
+### ✅ Add Timesheet
 
-### `npm start`
+* Add timesheet entries for specific dates and projects.
+* **Current Date** is automatically selected by default.
+* Tasks can be associated with specific **Types** and **Cases**.
+* Add a short **Description** for each task.
+* UI Example:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  ![Add Timesheet Screenshot](./Assests/Billing.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+### ✅ Add Billing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Each timesheet entry supports adding billing items.
 
-### `npm run build`
+* Billing includes:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  * **Type** (e.g., working time, kilometer)
+  * **Rate** per unit
+  * **Quantity** (default is time; for "kilometer" type, quantity is in kilometers)
+  * **Billable** checkbox to mark the item as chargeable
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **Amount** is automatically calculated as:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ```
+  Amount = Rate × Quantity
+  ```
 
-### `npm run eject`
+* **Total Amount** is the sum of all billing entries.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Screenshot Example for Kilometer entry (📷 add this image):
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ![Kilometer Billing Screenshot](./Assests/Kilometer.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📅 Technologies Used
 
-## Learn More
+* **Frontend**: React.js
+* **Backend**: Node.js + Express.js
+* **Database**: MongoDB
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📌 Notes
 
-### Code Splitting
+* Clean and intuitive UI for task and billing management.
+* Easily extendable for custom billing types or report generation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🚀 Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Clone the repo and install dependencies:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/yourusername/timesheet-billing.git
+cd timesheet-billing
+npm install
+npm start
+```
